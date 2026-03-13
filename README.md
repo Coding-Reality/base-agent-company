@@ -18,3 +18,4 @@ Start here:
 - [shared/policies/operating-rules.md](/home/andrew/entities/cr/projects/agent-company/shared/policies/operating-rules.md)
 - [pm2/ecosystem.config.cjs](/home/andrew/entities/cr/projects/agent-company/pm2/ecosystem.config.cjs)
 # base-agent-company
+# base-agent-company
