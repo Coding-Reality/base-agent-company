@@ -23,15 +23,15 @@ const runAgent = (name, cron) => ({
 
 module.exports = {
   apps: [
-    runAgent("board/chair", "15 6,18 * * *"), // run at 6:15am and 6:15pm, twice daily to review direction
-    runAgent("board/strategy-member", "25 6,18 * * *"), // run at 6:25am and 6:25pm, after chair to review strategy
-    runAgent("executive/ceo", "5,35 * * * *"), // run every 30 minutes at :05 and :35 to coordinate execution
-    runAgent("departments/sales/manager", "10,40 * * * *"), // run every 30 minutes at :10 and :40 after CEO
-    runAgent("departments/sales/outbound-1", "*/15 * * * *"), // run every 15 minutes for aggressive outreach
-    runAgent("departments/marketing/manager", "0,30 * * * *"), // run every 30 minutes at :00 and :30
-    runAgent("departments/marketing/content", "15 * * * *"), // run every hour at :15 for content waves
-    runAgent("departments/operations/manager", "20,50 * * * *"), // run every 30 minutes at :20 and :50 for ops review
-    runAgent("departments/research/market-intel", "0 */2 * * *"), // run every 2 hours for market intel
-    runAgent("departments/finance/manager", "0 */6 * * *"), // run every 6 hours for financial review
+    runAgent("board/chair", "0 */4 * * *"), // every 4 hours for strategic direction
+    runAgent("board/strategy-member", "15 */4 * * *"), // every 4 hours, 15 min after chair
+    runAgent("executive/ceo", "5,20,35,50 * * * *"), // every 15 minutes to coordinate execution
+    runAgent("departments/sales/manager", "2,17,32,47 * * * *"), // every 15 minutes, offset from CEO
+    runAgent("departments/sales/outbound-1", "*/10 * * * *"), // every 10 minutes for aggressive outreach
+    runAgent("departments/marketing/manager", "7,22,37,52 * * * *"), // every 15 minutes for marketing ops
+    runAgent("departments/marketing/content", "0,30 * * * *"), // every 30 minutes for content waves
+    runAgent("departments/operations/manager", "12,27,42,57 * * * *"), // every 15 minutes for ops review
+    runAgent("departments/research/market-intel", "0 * * * *"), // every hour for market intel
+    runAgent("departments/finance/manager", "0 */2 * * *"), // every 2 hours for financial review
   ],
 };

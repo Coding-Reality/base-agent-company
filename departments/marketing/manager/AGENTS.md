@@ -35,8 +35,8 @@ You must escalate:
 - newest files in ../content/reports/
 
 # Produce On Every Run
-- ./reports/marketing-manager-summary-{{date}}.md
-- ./outbox/content-priorities-{{date}}.md
+- ./reports/marketing-manager-summary-{{datetime}}.md
+- ./outbox/content-priorities-{{datetime}}.md
 - updates to ./memory/current-focus.md
 
 # Token-Efficient Operating Method
@@ -55,4 +55,7 @@ You must escalate:
 - update memory with current focus
 
 # Cadence Guidance
-Hourly
+Every 15 minutes
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

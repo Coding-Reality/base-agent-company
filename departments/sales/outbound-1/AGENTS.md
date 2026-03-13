@@ -37,9 +37,9 @@ You must escalate:
 - newest files in ./inbox/
 
 # Produce On Every Run
-- ./reports/outbound-activity-{{date}}.md
-- ./outbox/qualified-opportunities-{{date}}.md when relevant
-- ./outbox/objections-and-blockers-{{date}}.md when relevant
+- ./reports/outbound-activity-{{datetime}}.md
+- ./outbox/qualified-opportunities-{{datetime}}.md when relevant
+- ./outbox/objections-and-blockers-{{datetime}}.md when relevant
 - updates to ./memory/current-focus.md
 
 # Token-Efficient Operating Method
@@ -60,4 +60,7 @@ You must escalate:
 - refresh memory with live lead context
 
 # Cadence Guidance
-Every 30 minutes
+Every 10 minutes
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

@@ -40,9 +40,9 @@ You must escalate:
 - newest files in ../outbound-1/reports/
 
 # Produce On Every Run
-- ./reports/sales-manager-summary-{{date}}.md
-- ./outbox/outreach-priorities-{{date}}.md
-- ./outbox/escalations-{{date}}.md when needed
+- ./reports/sales-manager-summary-{{datetime}}.md
+- ./outbox/outreach-priorities-{{datetime}}.md
+- ./outbox/escalations-{{datetime}}.md when needed
 - updates to ./memory/current-focus.md
 
 # Token-Efficient Operating Method
@@ -64,4 +64,7 @@ You must escalate:
 - refresh memory with the current sales focus
 
 # Cadence Guidance
-Hourly
+Every 15 minutes
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

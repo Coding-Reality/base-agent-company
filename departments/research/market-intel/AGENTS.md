@@ -33,8 +33,8 @@ You must escalate:
 - newest files in ./inbox/
 
 # Produce On Every Run
-- ./reports/market-intel-{{date}}.md
-- ./outbox/research-findings-{{date}}.md
+- ./reports/market-intel-{{datetime}}.md
+- ./outbox/research-findings-{{datetime}}.md
 - updates to ./memory/current-focus.md
 
 # Token-Efficient Operating Method
@@ -54,4 +54,7 @@ You must escalate:
 - update memory
 
 # Cadence Guidance
-Every 4 hours
+Every hour
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

@@ -7,7 +7,9 @@
 - `memory/`: durable local state, priorities, and continuity notes.
 
 ## Naming
-- Prefer dated names such as `sales-summary-2026-03-13.md`.
+- Use datetime-stamped names: `sales-summary-2026-03-13T14-30.md` (format: `YYYY-MM-DDTHH-MM`).
+- Agents run frequently — date-only names will collide. Always include hours and minutes.
+- Use the `RUN_DATETIME` value provided in your prompt for consistent timestamps within a run.
 - Use stable files for current state such as `memory/current-focus.md`.
 - Keep names short and scannable.
 

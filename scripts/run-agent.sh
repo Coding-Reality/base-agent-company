@@ -54,12 +54,16 @@ $AGENT_DIR
 Your agent runtime name is:
 $AGENT_NAME
 
+Your run datetime stamp is:
+$RUN_DATETIME
+
 Execution requirements:
 - Read and obey your local AGENTS.md first.
 - Use token-efficient file discovery before opening documents.
 - Prefer current-focus files, indexes, and newest reports.
 - Create useful outputs on every run unless genuinely blocked.
-- Write dated files into reports/ and outbox/ when appropriate.
+- Use RUN_DATETIME ($RUN_DATETIME) in all output filenames instead of date-only stamps. Format: YYYY-MM-DDTHH-MM. Example: ceo-update-$RUN_DATETIME.md
+- Write datetime-stamped files into reports/ and outbox/ when appropriate.
 - Update memory/current-focus.md when your operating context changes.
 - If a needed role is missing or inactive, create a task in shared/company-data/tasks and note it in your report.
 - If you make file changes, commit them in this repository with the prefix [$AGENT_NAME]: followed by a concise summary.
@@ -90,7 +94,7 @@ cat "$AGENT_DIR/AGENTS.md" >>"$PROMPT_FILE"
 tg_send "🟢 *[$AGENT_NAME]* run starting"
 # ────────────────────────────────────────────────────────────────
 
-codex exec --full-auto - <"$PROMPT_FILE"
+codex exec --dangerously-bypass-approvals-and-sandbox - <"$PROMPT_FILE"
 EXIT_CODE=$?
 
 # ── Notify: agent run finished ──────────────────────────────────

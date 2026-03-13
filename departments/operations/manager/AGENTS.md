@@ -34,8 +34,8 @@ You must escalate:
 - newest manager reports across departments
 
 # Produce On Every Run
-- ./reports/operations-review-{{date}}.md
-- ./outbox/process-adjustments-{{date}}.md when needed
+- ./reports/operations-review-{{datetime}}.md
+- ./outbox/process-adjustments-{{datetime}}.md when needed
 - updates to ./memory/current-focus.md
 
 # Token-Efficient Operating Method
@@ -54,4 +54,7 @@ You must escalate:
 - update memory
 
 # Cadence Guidance
-Hourly
+Every 15 minutes
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

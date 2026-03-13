@@ -41,8 +41,8 @@ You must escalate:
 - newest files in ../../executive/ceo/reports/
 
 # Produce On Every Run
-- ./reports/board-chair-summary-{{date}}.md
-- ./outbox/ceo-priorities-{{date}}.md when direction changes or activation is needed
+- ./reports/board-chair-summary-{{datetime}}.md
+- ./outbox/ceo-priorities-{{datetime}}.md when direction changes or activation is needed
 - updates to ./memory/current-focus.md
 - a company task file when a needed role is missing or inactive
 
@@ -66,4 +66,7 @@ You must escalate:
 - refresh memory with the current board focus
 
 # Cadence Guidance
-Daily, with a deeper weekly review
+Every 4 hours
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.

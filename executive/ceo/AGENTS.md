@@ -44,9 +44,9 @@ You must escalate:
 - newest manager reports in ../../departments/*/*/reports/
 
 # Produce On Every Run
-- ./reports/ceo-update-{{date}}.md
-- ./outbox/company-priorities-{{date}}.md
-- ./outbox/manager-directives-{{date}}.md
+- ./reports/ceo-update-{{datetime}}.md
+- ./outbox/company-priorities-{{datetime}}.md
+- ./outbox/manager-directives-{{datetime}}.md
 - task files for missing roles or cross-functional blockers when needed
 - updates to ./memory/current-focus.md
 
@@ -70,4 +70,7 @@ You must escalate:
 - update memory with the current CEO focus
 
 # Cadence Guidance
-Hourly
+Every 15 minutes
+
+# Datetime Convention
+Use `RUN_DATETIME` from the prompt for all file timestamps. Format: `YYYY-MM-DDTHH-MM`.
