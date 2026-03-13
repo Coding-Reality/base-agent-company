@@ -17,3 +17,4 @@ Start here:
 - [COMPANY.md](/home/andrew/entities/cr/projects/agent-company/COMPANY.md)
 - [shared/policies/operating-rules.md](/home/andrew/entities/cr/projects/agent-company/shared/policies/operating-rules.md)
 - [pm2/ecosystem.config.cjs](/home/andrew/entities/cr/projects/agent-company/pm2/ecosystem.config.cjs)
+# base-agent-company
